@@ -34,8 +34,9 @@ if not hasattr(st, 'already_started_server'):
     import os
 
     endpoint = ngrok.connect(8055).public_url
+
     status = requests.get(
-        f'https://jarvis-ai-api.herokuapp.com/update_api_endpoint/?username=dipeshpal&token={st.secrets["token"]}&endpoint={endpoint}')
+        f'https://jarvis-ai-api.herokuapp.com/update_api_endpoint_asr/?username=dipeshpal&token={st.secrets["token"]}&endpoint={endpoint}')
     print("endpoint------------------------------", endpoint)
     os.system("opyrator launch-api op:ai_models_jarvis --port 8055")
     # os.system("uvicorn asr_fastapi:app --reload --reload-dir data")

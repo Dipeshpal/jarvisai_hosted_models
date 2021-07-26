@@ -34,6 +34,7 @@ if not hasattr(st, 'already_started_server'):
     import os
 
     endpoint = ngrok.connect(8000).public_url
+
     status = requests.get(
         f'https://jarvis-ai-api.herokuapp.com/update_api_endpoint_asr/?username=dipeshpal&token={st.secrets["token"]}&endpoint={endpoint}')
     print("endpoint------------------------------", endpoint)
