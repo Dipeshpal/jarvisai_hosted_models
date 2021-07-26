@@ -1,0 +1,8 @@
+torch
+transformers
+pyngrok
+opyrator
+librosa
+fastapi
+uvicorn[standard]
+python-multipart
